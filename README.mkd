@@ -1,0 +1,7 @@
+Super-simple YouTube player event tracking with Google Analytics.
+
+Free, as in beer.
+
+Refer to `example.html` for the how-to.
+
+Enjoy.
