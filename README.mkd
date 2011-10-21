@@ -2,7 +2,7 @@ Super-simple YouTube player event tracking with Google Analytics. Free, as in be
 
 If you'd like to support software like this, [check out my other products](http://aaroncollegeman.com).
 
-Refer to [example.html](blob/master/example.html) for the how-to.
+Refer to [example.html](/collegeman/youtube-ga/blob/master/example.html) for the how-to.
 
 Enjoy.
 
