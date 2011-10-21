@@ -1,0 +1,60 @@
+<!-- Step #1: Load Google Analytics, if not already loaded in your header. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5440532-6']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Step #2: Load the Video Player -->
+<script src="youtube-ga.min.js"></script>
+<script>
+  // Syntax #1: The easiest way to use YouTubeGA.
+  // This will drop the YouTube player into your page at the point in which this
+  // script is executing.
+  //
+  // Used this way, the events you'll see in GA are:
+  //
+  // Category: 'YouTube',   Action: 'SRV Voodoo Child',  Label: 'Ready' - when the video loads
+  // ...                    ...                          Label: 'Started' - when the video first begins playing
+  // ...                    ...                          Label: '30sec' - at the 30 second mark in playback
+  // ...                    ...                          Label: '60sec' - at the 60 second mark...
+  // ...                    ...                          Label: 'nsec' - at each 30-second interval therafter...
+  // ...                    ...                          Label: 'Ended' - when the video completes
+
+  YouTubeGA.embed('http://www.youtube.com/watch?v=1GSpbuFSr2o', 'SRV Voodoo Child');
+
+  // Syntax #2 - you can control a lot about how the video player
+  // is rendered, and how the events are registered.
+  
+  YouTubeGA.embed({
+    // The YouTube video you want to load: a URL or an ID
+    url: 'http://youtu.be/zAG-kX_IlUw',
+    // The Google Analytics Category - the default is YouTube
+    category: 'YouTube',
+    // The title of YouTube video, which serves to differentiate it from the rest;
+    // if left undefined, title will take on the value of the video's ID, e.g., 
+    title: 'Stevie Ray Vaughan Little Wing',
+    // the ID of a container into which the YouTube player should be dropped
+    target: 'player',
+    // specify the width of the player
+    width: '640',
+    // specify the height of the player
+    height: '390'
+  });
+
+  // Note that there are several ways to specify the video you want to load.
+  //
+  // These all load the same video:
+  //
+  // http://www.youtube.com/watch?v=1GSpbuFSr2o
+  // http://www.youtube.com/embed/1GSpbuFSr2o
+  // http://youtu.be/1GSpbuFSr2o
+  // 1GSpbuFSr2o
+</script>
+
+<p id="player"></p>
